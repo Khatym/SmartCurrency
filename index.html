@@ -1,91 +1,136 @@
-<!DOCTYPE html><html lang="en">
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Smart Currency</title>
   <style>
     body {
       margin: 0;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: linear-gradient(to bottom, #0d1117, #1a1f2a);
-      color: white;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #0e1626;
+      color: #fff;
       text-align: center;
+    }
+    .container {
       padding: 20px;
     }
     .logo {
       width: 160px;
-      height: 160px;
       border-radius: 50%;
-      background-color: #0d1117;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin: 20px auto;
-      box-shadow: 0 0 15px rgba(0, 0, 0, 0.6);
-    }
-    .logo img {
-      width: 80%;
-      height: auto;
-      border-radius: 50%;
+      margin-top: 30px;
     }
     h1 {
-      margin-bottom: 5px;
+      font-size: 2em;
+      margin-top: 20px;
     }
-    .description {
-      color: #bbb;
-      font-size: 1rem;
-      margin-bottom: 15px;
+    p.description {
+      font-size: 1.1em;
+      margin: 10px auto 20px;
+      max-width: 600px;
+      line-height: 1.6;
     }
-    .details {
-      margin: 10px 0;
-      font-size: 1rem;
+    .stats {
+      margin: 20px 0;
+      font-size: 1.1em;
     }
     .stars {
-      color: #f5c518;
-      font-size: 1.2rem;
+      color: gold;
+      font-size: 1.3em;
     }
-    .btn-install, .btn-follow {
+    .buttons {
+      margin: 20px 0;
+    }
+    .btn {
       display: inline-block;
-      margin: 15px;
+      margin: 10px;
       padding: 12px 25px;
-      font-size: 1rem;
-      font-weight: bold;
       border-radius: 8px;
-      cursor: pointer;
-      transition: background 0.3s;
       text-decoration: none;
-    }
-    .btn-install {
-      background-color: #00c853;
       color: white;
+      font-weight: bold;
+      transition: background-color 0.3s ease;
     }
-    .btn-install:hover {
-      background-color: #00e676;
+    .install {
+      background-color: #00c389;
     }
-    .btn-follow {
-      background-color: #1877f2;
-      color: white;
+    .install:hover {
+      background-color: #009e6e;
     }
-    .btn-follow:hover {
-      background-color: #4592f5;
+    .facebook {
+      background-color: #3b5998;
     }
-    .footer {
-      margin-top: 30px;
-      font-size: 0.9rem;
-      color: #888;
+    .facebook:hover {
+      background-color: #2d4373;
+    }
+    .screenshots {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 30px;
+      margin: 40px 0;
+    }
+    .screenshot img {
+      width: 90%;
+      max-width: 400px;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+    }
+    .screenshot p {
+      margin-top: 10px;
+      font-size: 1em;
+      color: #ccc;
+    }
+    footer {
+      margin-top: 50px;
+      font-size: 0.9em;
+      color: #999;
     }
   </style>
 </head>
 <body>
-  <div class="logo">
-    <img src="https://i.postimg.cc/P5ynnPsf/file-000000003e68620aaf1f3892979a5cec.png" alt="Smart Currency Logo" />
-  </div>
-  <h1>Smart Currency</h1>
-  <p class="description">تطبيق ذكي يعرض اسعار العملات الأجنبية مقابل الجنيه السوداني.</p>
-  <div class="details">App Size: 51.2 MB</div>
-  <div class="details">Downloads: 10K+</div>
-  <div class="stars">★★★★☆ (4.6/5)</div><a class="btn-install" href="https://www.mediafire.com/file/qs52lk5ryty9id9/app-release.apk/file">Install</a> <a class="btn-follow" href="https://www.facebook.com/profile.php?id=61575655272235">Follow on Facebook</a>
+  <div class="container">
+    <img class="logo" src="https://i.postimg.cc/P5ynnPsf/file-000000003e68620aaf1f3892979a5cec.png" alt="App Logo">
+    <h1>Smart Currency</h1>
+    <p class="description">
+      تطبيق ذكي يعرض اسعار العملات الأجنبية مقابل الجنيه السوداني.
+    </p>
+    <div class="stats">
+      App Size: 51.2 MB<br>
+      Downloads: 10K+<br>
+      <span class="stars">★★★★☆ (4.6/5)</span>
+    </div>
+    <div class="buttons">
+      <a class="btn install" href="#">Install</a>
+      <a class="btn facebook" href="#">Follow on Facebook</a>
+    </div>
 
-  <div class="footer">&copy; 2025 Smart Currency. All rights reserved.</div>
+    <div class="screenshots">
+      <div class="screenshot">
+        <img src="https://i.postimg.cc/g0YW53x2/Screenshot.jpg" alt="الرئيسية">
+        <p>الصفحة الرئيسية - أسعار السوق الرسمي والموازي</p>
+      </div>
+      <div class="screenshot">
+        <img src="https://i.postimg.cc/3ND5pBcn/Screenshot.jpg" alt="المفضلة">
+        <p>قائمة العملات المفضلة لديك</p>
+      </div>
+      <div class="screenshot">
+        <img src="https://i.postimg.cc/jC0VhfVK/Screenshot.jpg" alt="الرسوم البيانية">
+        <p>رسم بياني لتغير سعر العملات</p>
+      </div>
+      <div class="screenshot">
+        <img src="https://i.postimg.cc/Jns46jFB/Screenshot.jpg" alt="العملات الرقمية">
+        <p>متابعة العملات الرقمية المشهورة</p>
+      </div>
+      <div class="screenshot">
+        <img src="https://i.postimg.cc/wxsjDcJC/Screenshot.jpg" alt="حول التطبيق">
+        <p>معلومات حول التطبيق وفريق التطوير</p>
+      </div>
+    </div>
+
+    <footer>
+      © 2025 Smart Currency. All rights reserved.
+    </footer>
+  </div>
 </body>
 </html>
