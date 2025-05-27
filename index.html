@@ -36,6 +36,19 @@
       color: gold;
       font-size: 1.3em;
     }
+    .rating {
+      margin-top: 10px;
+    }
+    .rating span {
+      font-size: 2em;
+      cursor: pointer;
+      color: #777;
+      transition: color 0.2s;
+    }
+    .rating span.hover,
+    .rating span.selected {
+      color: gold;
+    }
     .screenshots {
       display: flex;
       overflow-x: auto;
@@ -112,6 +125,15 @@
       <span class="stars">★★★★☆ (4.6/5)</span>
     </div>
 
+    <div class="rating" id="starRating">
+      <span data-value="1">&#9733;</span>
+      <span data-value="2">&#9733;</span>
+      <span data-value="3">&#9733;</span>
+      <span data-value="4">&#9733;</span>
+      <span data-value="5">&#9733;</span>
+    </div>
+    <div id="ratingValue" style="margin-top: 8px; font-size: 1em;"></div>
+
     <div class="screenshots">
       <a href="#img1"><img src="https://i.postimg.cc/g0YW53x2/Screenshot.jpg" alt="screenshot1"></a>
       <a href="#img2"><img src="https://i.postimg.cc/3ND5pBcn/Screenshot.jpg" alt="screenshot2"></a>
@@ -146,5 +168,37 @@
     <img class="modal-content" src="https://i.postimg.cc/wxsjDcJC/Screenshot.jpg">
   </div>
 
+  <script>
+    const stars = document.querySelectorAll('#starRating span');
+    const ratingValue = document.getElementById('ratingValue');
+    let selectedRating = 0;
+
+    stars.forEach(star => {
+      star.addEventListener('mouseover', () => {
+        resetStars();
+        highlightStars(star.dataset.value);
+      });
+
+      star.addEventListener('mouseout', () => {
+        resetStars();
+        if (selectedRating) highlightStars(selectedRating);
+      });
+
+      star.addEventListener('click', () => {
+        selectedRating = star.dataset.value;
+        ratingValue.textContent = `لقد قمت بتقييم التطبيق بـ ${selectedRating} نجوم`;
+      });
+    });
+
+    function highlightStars(count) {
+      for (let i = 0; i < count; i++) {
+        stars[i].classList.add('hover');
+      }
+    }
+
+    function resetStars() {
+      stars.forEach(s => s.classList.remove('hover'));
+    }
+  </script>
 </body>
-    </html>
+</html>
