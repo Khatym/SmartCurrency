@@ -1,84 +1,91 @@
 <!DOCTYPE html><html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Smart Currency</title>
   <style>
     body {
-      background-color: #0f172a;
-      color: white;
-      font-family: Arial, sans-serif;
-      text-align: center;
       margin: 0;
-      padding: 0;
-    }
-    .container {
-      max-width: 600px;
-      margin: 0 auto;
-      padding: 40px 20px;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(to bottom, #0d1117, #1a1f2a);
+      color: white;
+      text-align: center;
+      padding: 20px;
     }
     .logo {
-      width: 200px;
-      height: 200px;
+      width: 160px;
+      height: 160px;
       border-radius: 50%;
-      background-color: #1e293b;
+      background-color: #0d1117;
       display: flex;
-      justify-content: center;
       align-items: center;
-      margin: 0 auto 30px;
+      justify-content: center;
+      margin: 20px auto;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.6);
     }
     .logo img {
       width: 80%;
+      height: auto;
       border-radius: 50%;
     }
     h1 {
-      font-size: 36px;
-      margin-bottom: 10px;
+      margin-bottom: 5px;
     }
-    .info {
-      font-size: 18px;
+    .description {
+      color: #bbb;
+      font-size: 1rem;
+      margin-bottom: 15px;
+    }
+    .details {
       margin: 10px 0;
+      font-size: 1rem;
     }
-    .install-button {
-      background-color: #10b981;
-      color: white;
-      padding: 15px 30px;
-      border: none;
-      border-radius: 10px;
-      font-size: 18px;
-      text-decoration: none;
+    .stars {
+      color: #f5c518;
+      font-size: 1.2rem;
+    }
+    .btn-install, .btn-follow {
       display: inline-block;
-      margin: 30px 0;
-    }
-    .social {
-      margin-top: 40px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      gap: 10px;
-    }
-    .social a {
-      background-color: #3b82f6;
-      color: white;
-      padding: 10px 20px;
-      border-radius: 6px;
-      text-decoration: none;
+      margin: 15px;
+      padding: 12px 25px;
+      font-size: 1rem;
       font-weight: bold;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.3s;
+      text-decoration: none;
+    }
+    .btn-install {
+      background-color: #00c853;
+      color: white;
+    }
+    .btn-install:hover {
+      background-color: #00e676;
+    }
+    .btn-follow {
+      background-color: #1877f2;
+      color: white;
+    }
+    .btn-follow:hover {
+      background-color: #4592f5;
+    }
+    .footer {
+      margin-top: 30px;
+      font-size: 0.9rem;
+      color: #888;
     }
   </style>
 </head>
 <body>
-  <div class="container">
-    <div class="logo">
-      <img src="https://i.postimg.cc/P5ynnPsf/file-000000003e68620aaf1f3892979a5cec.png" alt="Smart Currency Logo">
-    </div>
-    <h1>Smart Currency</h1>
-    <div class="info">App Size: 51.2 MB</div>
-    <div class="info">Downloads: 10K+</div>
-    <a class="install-button" href="https://www.mediafire.com/file/qs52lk5ryty9id9/app-release.apk/file">Install</a><div class="social">
-  <a href="https://www.facebook.com/profile.php?id=61575655272235">Follow on Facebook</a>
-</div>
-
+  <div class="logo">
+    <img src="https://i.postimg.cc/P5ynnPsf/file-000000003e68620aaf1f3892979a5cec.png" alt="Smart Currency Logo" />
   </div>
+  <h1>Smart Currency</h1>
+  <p class="description">تطبيق ذكي يعرض اسعار العملات الأجنبية مقابل الجنيه السوداني.</p>
+  <div class="details">App Size: 51.2 MB</div>
+  <div class="details">Downloads: 10K+</div>
+  <div class="stars">★★★★☆ (4.6/5)</div><a class="btn-install" href="https://www.mediafire.com/file/qs52lk5ryty9id9/app-release.apk/file">Install</a> <a class="btn-follow" href="https://www.facebook.com/profile.php?id=61575655272235">Follow on Facebook</a>
+
+  <div class="footer">&copy; 2025 Smart Currency. All rights reserved.</div>
 </body>
 </html>
