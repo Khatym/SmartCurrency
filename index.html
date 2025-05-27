@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ar">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -16,121 +16,136 @@
       padding: 20px;
     }
     .logo {
-      width: 160px;
+      width: 130px;
       border-radius: 50%;
       margin-top: 30px;
     }
     h1 {
       font-size: 2em;
-      margin-top: 20px;
+      margin-top: 10px;
     }
     p.description {
       font-size: 1.1em;
       margin: 10px auto 20px;
       max-width: 600px;
-      line-height: 1.6;
     }
     .stats {
-      margin: 20px 0;
-      font-size: 1.1em;
+      margin: 15px 0;
     }
     .stars {
       color: gold;
       font-size: 1.3em;
     }
-    .buttons {
-      margin: 20px 0;
-    }
-    .btn {
-      display: inline-block;
-      margin: 10px;
-      padding: 12px 25px;
-      border-radius: 8px;
-      text-decoration: none;
-      color: white;
-      font-weight: bold;
-      transition: background-color 0.3s ease;
-    }
-    .install {
-      background-color: #00c389;
-    }
-    .install:hover {
-      background-color: #009e6e;
-    }
-    .facebook {
-      background-color: #3b5998;
-    }
-    .facebook:hover {
-      background-color: #2d4373;
-    }
     .screenshots {
       display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 30px;
-      margin: 40px 0;
+      overflow-x: auto;
+      padding: 20px 10px;
+      gap: 15px;
+      justify-content: center;
     }
-    .screenshot img {
-      width: 90%;
-      max-width: 400px;
+    .screenshots img {
+      height: 160px;
       border-radius: 12px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+      cursor: pointer;
+      transition: transform 0.3s ease;
     }
-    .screenshot p {
-      margin-top: 10px;
-      font-size: 1em;
-      color: #ccc;
+    .screenshots img:hover {
+      transform: scale(1.05);
+    }
+    .btn-download {
+      display: inline-block;
+      margin: 30px auto;
+      padding: 14px 30px;
+      background-color: #00c389;
+      color: white;
+      border-radius: 10px;
+      font-size: 1.1em;
+      text-decoration: none;
+      transition: background-color 0.3s ease;
+    }
+    .btn-download:hover {
+      background-color: #009e6e;
     }
     footer {
-      margin-top: 50px;
+      margin-top: 30px;
       font-size: 0.9em;
-      color: #999;
+      color: #aaa;
+    }
+    /* Modal styles */
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 999;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0,0,0,0.8);
+    }
+    .modal-content {
+      margin: 5% auto;
+      display: block;
+      max-width: 90%;
+      max-height: 80%;
+      border-radius: 10px;
+    }
+    .modal:target {
+      display: block;
+    }
+    .close {
+      position: absolute;
+      top: 30px;
+      right: 40px;
+      font-size: 2em;
+      color: white;
+      text-decoration: none;
     }
   </style>
 </head>
 <body>
+
   <div class="container">
-    <img class="logo" src="https://i.postimg.cc/P5ynnPsf/file-000000003e68620aaf1f3892979a5cec.png" alt="App Logo">
+    <img class="logo" src="https://i.postimg.cc/P5ynnPsf/file-000000003e68620aaf1f3892979a5cec.png" alt="Smart Currency Logo">
     <h1>Smart Currency</h1>
-    <p class="description">
-      تطبيق ذكي يعرض اسعار العملات الأجنبية مقابل الجنيه السوداني.
-    </p>
+    <p class="description">تطبيق ذكي يعرض اسعار العملات الأجنبية مقابل الجنيه السوداني.</p>
     <div class="stats">
-      App Size: 51.2 MB<br>
-      Downloads: 10K+<br>
+      الحجم: 51.2 MB | التحميلات: 10K+<br>
       <span class="stars">★★★★☆ (4.6/5)</span>
-    </div>
-    <div class="buttons">
-      <a class="btn install" href="#">Install</a>
-      <a class="btn facebook" href="#">Follow on Facebook</a>
     </div>
 
     <div class="screenshots">
-      <div class="screenshot">
-        <img src="https://i.postimg.cc/g0YW53x2/Screenshot.jpg" alt="الرئيسية">
-        <p>الصفحة الرئيسية - أسعار السوق الرسمي والموازي</p>
-      </div>
-      <div class="screenshot">
-        <img src="https://i.postimg.cc/3ND5pBcn/Screenshot.jpg" alt="المفضلة">
-        <p>قائمة العملات المفضلة لديك</p>
-      </div>
-      <div class="screenshot">
-        <img src="https://i.postimg.cc/jC0VhfVK/Screenshot.jpg" alt="الرسوم البيانية">
-        <p>رسم بياني لتغير سعر العملات</p>
-      </div>
-      <div class="screenshot">
-        <img src="https://i.postimg.cc/Jns46jFB/Screenshot.jpg" alt="العملات الرقمية">
-        <p>متابعة العملات الرقمية المشهورة</p>
-      </div>
-      <div class="screenshot">
-        <img src="https://i.postimg.cc/wxsjDcJC/Screenshot.jpg" alt="حول التطبيق">
-        <p>معلومات حول التطبيق وفريق التطوير</p>
-      </div>
+      <a href="#img1"><img src="https://i.postimg.cc/g0YW53x2/Screenshot.jpg" alt="screenshot1"></a>
+      <a href="#img2"><img src="https://i.postimg.cc/3ND5pBcn/Screenshot.jpg" alt="screenshot2"></a>
+      <a href="#img3"><img src="https://i.postimg.cc/jC0VhfVK/Screenshot.jpg" alt="screenshot3"></a>
+      <a href="#img4"><img src="https://i.postimg.cc/Jns46jFB/Screenshot.jpg" alt="screenshot4"></a>
+      <a href="#img5"><img src="https://i.postimg.cc/wxsjDcJC/Screenshot.jpg" alt="screenshot5"></a>
     </div>
 
-    <footer>
-      © 2025 Smart Currency. All rights reserved.
-    </footer>
+    <a class="btn-download" href="#">تحميل التطبيق</a>
+    <footer>© 2025 Smart Currency. All rights reserved.</footer>
   </div>
+
+  <!-- Modals -->
+  <div id="img1" class="modal">
+    <a href="#" class="close">&times;</a>
+    <img class="modal-content" src="https://i.postimg.cc/g0YW53x2/Screenshot.jpg">
+  </div>
+  <div id="img2" class="modal">
+    <a href="#" class="close">&times;</a>
+    <img class="modal-content" src="https://i.postimg.cc/3ND5pBcn/Screenshot.jpg">
+  </div>
+  <div id="img3" class="modal">
+    <a href="#" class="close">&times;</a>
+    <img class="modal-content" src="https://i.postimg.cc/jC0VhfVK/Screenshot.jpg">
+  </div>
+  <div id="img4" class="modal">
+    <a href="#" class="close">&times;</a>
+    <img class="modal-content" src="https://i.postimg.cc/Jns46jFB/Screenshot.jpg">
+  </div>
+  <div id="img5" class="modal">
+    <a href="#" class="close">&times;</a>
+    <img class="modal-content" src="https://i.postimg.cc/wxsjDcJC/Screenshot.jpg">
+  </div>
+
 </body>
 </html>
